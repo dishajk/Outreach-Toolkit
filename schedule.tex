@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling} 
+\usepackage{xcolor}
+
+\definecolor{KwKblue}{HTML}{1D76B7}
+
+\linespread{1.2}
+
+\setlength{\arrayrulewidth}{0.35mm}
+
+\newcommand{\subtitle}[1]{
+  \pretitle{\begin{center}\Large} % Title formatting
+  \posttitle{\par\large#1\par\normalsize by\par\large \textbf{\speaking}\par\large \textit{\affiliating}\par\vspace{1em}\end{center}} % Subtitle + "by" + speaker + affiliation
+}
+
+\newcommand{\speaker}[1]{\def\speaking{#1}} % Store speaker name
+\newcommand{\affiliation}[1]{\def\affiliating{#1}} % Store affiliation
+\newcommand{\speaking}{} % Default empty
+\newcommand{\affiliating}{} % Default empty
+
+\title{\emph{\color{KwKblue}Three Puzzles from the First Billion Years}}
+\subtitle{Kaapi with Kuriosity public talk at the J N Planetarium, Bengaluru}
+\speaker{Girish Kulkarni} % Define speaker
+\affiliation{Tata Institute of Fundamental Research, Mumbai} % Define affiliation
+\date{Sunday, 13 April 2025}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\centering
+Program Schedule
+\begin{table}[h!]
+    \begin{center}
+    \begin{tabular}{|c|l|} 
+        \hline
+        15:35-15:55 & AV testing\\\hline
+        16:00-16:10 & \emph{Welcome address and Introduction to the speaker}\\ 
+            & B R Guruprasad, JNP \\\hline
+        % 16:05-16:10 &\emph{Introduction to the speaker}\\
+        % & Parameswaran Ajith, ICTS-TIFR\\\hline
+        16:10-17:10 &Kaapi with Kuriosity - \emph{Three Puzzles from the First Billion Years}\\
+        & Girish Kulkarni\\\hline
+        17:10-17:30 & Q \& A\\\hline
+        17:30 & Refreshments\\\hline
+       \end{tabular}
+    \end{center}
+\end{table}
+\end{document}
