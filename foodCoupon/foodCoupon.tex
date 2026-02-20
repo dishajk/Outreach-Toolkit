@@ -1,0 +1,58 @@
+% To convert to svg
+% lualatex --output-format=dvi filename.tex
+% dvisvgm filename.dvi
+
+% \documentclass[border=0]{standalone}
+% \documentclass[dvisvgm]{minimal}		%uncomment to convert to svg
+
+\documentclass[a4paper]{article}
+\usepackage[left=-4mm,top=1mm,right=0mm,bottom=0mm]{geometry}
+\usepackage{tikz}
+\usepackage[none]{hyphenat}
+\usepackage{xcolor}
+\definecolor{ictsMaroon}{HTML}{7A1F1F}
+\tikzset{
+    coupon/.style={
+        ultra thick,
+        ictsMaroon
+    }
+}
+\newcommand{\coupon}[1]{%
+\draw[coupon]
+(0,0) rectangle
+node[
+    align=center,
+    text width=0.475\textwidth,
+] {
+    \Large\bfseries PriSM09\\[0.5em]
+    Sat, 21 Feb 2026\\
+    1:00 pm to 2:00 pm\\
+    ICTS Cafeteria\\[1em]
+    {\Huge Lunch}\\[1em]
+    {\Large No.~#1}\\[1em]
+    {\scriptsize
+    This coupon is redeemable only at the ICTS Cafeteria on the specified date.
+    This coupon is valid for one-time use only and is non-transferable.}
+}
+(0.475\textwidth,7cm);
+}
+\pagestyle{empty}
+\begin{document}
+\foreach \i in {8,16,24,...,56}{
+\begin{tikzpicture}
+    \pgfmathtruncatemacro{\start}{int((\i-7))}
+    \foreach \n in {\start,...,\i} {
+    \pgfmathtruncatemacro{\row}{int((\n-1)/2)}
+    \pgfmathtruncatemacro{\col}{mod(\n-1,2)}
+
+    \begin{scope}[
+        xshift=\col*0.48\textwidth,
+        yshift=-\row*7.1cm
+    ]
+        \coupon{\n}
+    \end{scope}
+}
+\end{tikzpicture}
+\newpage    
+}
+\end{document}
