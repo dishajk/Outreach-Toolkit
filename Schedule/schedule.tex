@@ -1,4 +1,7 @@
 \documentclass[a4paper,12pt]{article}
+\usepackage{fontspec}
+\newfontfamily{\kan}[Script=Kannada]{Noto Sans Kannada}
+
 \usepackage[margin=1in]{geometry}
 \usepackage{titling} 
 \usepackage{xcolor}
@@ -10,8 +13,9 @@
 \setlength{\arrayrulewidth}{0.35mm}
 
 \newcommand{\subtitle}[1]{
-  \pretitle{\begin{center}\Large} % Title formatting
-  \posttitle{\par\large#1\par\normalsize by\par\large \textbf{\speaking}\par\large \textit{\affiliating}\par\vspace{1em}\end{center}} % Subtitle + "by" + speaker + affiliation
+  \pretitle{\begin{center}\large#1\par\vspace{1em}\Large} % Title formatting
+%   \posttitle{\par\large#1\par\normalsize by\par\large \textbf{\speaking}\par\large \textit{\affiliating}\par\vspace{1em}\end{center}} % Subtitle + "by" + speaker + affiliation
+  \posttitle{\par\normalsize \par\large \textbf{\speaking}\par\large \textit{\affiliating}\par\vspace{1em}\end{center}} % Subtitle + "by" + speaker + affiliation
 }
 
 \newcommand{\speaker}[1]{\def\speaking{#1}} % Store speaker name
@@ -19,14 +23,16 @@
 \newcommand{\speaking}{} % Default empty
 \newcommand{\affiliating}{} % Default empty
 
-\title{\emph{\color{KwKblue} Nature's Symmetries and Textures }}
-% \title{\emph{\color{KwKblue}Flexible Solutions: Lessons from Nature's Rubber Proteins}}
-\subtitle{Einstein Lecture at St. Joseph's University, Bengaluru}
+\title{\emph{\color{KwKblue} {\kan ವೈಜ್ಞಾನಿಕ ಮನೋಧರ್ಮ. ಏನು? ಏಕೆ?}}}
+
+\subtitle{{\kan ದೈನಂದಿನ ವಿಜ್ಞಾನ}}
+% \subtitle{Vigyan Adda}
+% \subtitle{Einstein Lecture at St. Joseph's University, Bengaluru}
 % \subtitle{Kaapi with Kuriosity public talk at the J N Planetarium, Bengaluru}
 % \subtitle{Public Lecture at the Chandrasekhar Auditorium, ICTS-TIFR, Bengaluru}
-\speaker{Sidney R. Nagel} % Define speaker
-\affiliation{University of Chicago} % Define affiliation
-\date{Saturday, 14 December 2025}
+\speaker{{\kan ಎ. ಎಸ್. ಕೆ. ವಿ. ಎಸ್. ಶರ್ಮ}} % Define speaker
+\affiliation{{\kan ಮೈಸೂರು}} % Define affiliation
+\date{Thursday, July 3, 2026}
 
 \begin{document}
 \maketitle
@@ -37,19 +43,22 @@ Program Schedule
     \begin{center}
     \begin{tabular}{|c|l|} 
         \hline
-        15:00-15:15 & AV/Tecnical testing\\\hline
-        15:15-15:18 & \emph{Welcome address}\\ 
-            & Rev Dr Victor Lobo SJ, Vice-Chancellor, SJU \\\hline
-        15:18-15:20 &\emph{Introduction to the speaker}\\
-        & Prof. Srikanth Sastry\\\hline
-        15:20-15:25 &\emph{Felicitation}\\
-        & SJU Officials\\\hline
-        15:25-16:15 &Einstein Lecture - \emph{Nature's Symmetries and Textures}\\
-        & Prof. Sidney Nagel, University of Chicago\\\hline
-        16:15-16:45 & Q \& A\\\hline
-        16:45-16:50 & \emph{Vote of Thanks}\\
-        & SJU\\\hline
-        16:50 & Refreshments\\\hline
+         & AV/Technical testing\\\hline
+        14:45-14:55 & Refreshments\\\hline
+        15:00-15:05 & \emph{Welcome address \& introduction of the speaker}\\ 
+            & Vijaykumar Krishnamurthy, ICTS-TIFR \\\hline
+        % 15:18-15:20 &\emph{Introduction to the speaker}\\
+        % & Prof. Srikanth Sastry\\\hline
+        % 15:20-15:25 &\emph{Felicitation}\\
+        % & SJU Officials\\\hline
+        15:05-15:45 &{\kan ದೈನಂದಿನ ವಿಜ್ಞಾನ} - \emph{{\kan ವೈಜ್ಞಾನಿಕ ಮನೋಧರ್ಮ. ಏನು? ಏಕೆ?}}\\
+        & A. S. K. V. S. Sharma, Mysore\\\hline
+        15:45-16:00 & Q \& A\\\hline
+        16:00 & \emph{Concluding remarks \& vote of thanks}\\
+        & Disha Kuzhively, ICTS-TIFR\\\hline
+        % 16:45-16:50 & \emph{Vote of Thanks}\\
+        % & SJU\\\hline
+        % 16:50 & Refreshments\\\hline
        \end{tabular}
     \end{center}
 \end{table}
