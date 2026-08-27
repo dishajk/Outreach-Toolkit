@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{fontspec}
+\newfontfamily{\kan}[Script=Kannada]{Noto Sans Kannada}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{titling} 
+\usepackage{xcolor}
+
+\definecolor{KwKblue}{HTML}{1D76B7}
+
+\linespread{1.2}
+
+\setlength{\arrayrulewidth}{0.35mm}
+
+\newcommand{\subtitle}[1]{
+  \pretitle{\begin{center}\large#1\par\vspace{1em}\Large} % Title formatting
+%   \posttitle{\par\large#1\par\normalsize by\par\large \textbf{\speaking}\par\large \textit{\affiliating}\par\vspace{1em}\end{center}} % Subtitle + "by" + speaker + affiliation
+  \posttitle{\par\normalsize \par\large \textbf{\speaking}\par\large \textit{\affiliating}\par\vspace{1em}\end{center}} % Subtitle + "by" + speaker + affiliation
+}
+
+\newcommand{\speaker}[1]{\def\speaking{#1}} % Store speaker name
+\newcommand{\affiliation}[1]{\def\affiliating{#1}} % Store affiliation
+\newcommand{\speaking}{} % Default empty
+\newcommand{\affiliating}{} % Default empty
+
+\title{\emph{\color{KwKblue} {\kan ಏನನ್ನು ತಿನ್ನಬೇಕು? ಏನನ್ನು ತಿನ್ನಬಾರದು?}}}
+
+\subtitle{{\kan ದೈನಂದಿನ ವಿಜ್ಞಾನ}}
+% \subtitle{Vigyan Adda}
+% \subtitle{Einstein Lecture at St. Joseph's University, Bengaluru}
+% \subtitle{Kaapi with Kuriosity public talk at the J N Planetarium, Bengaluru}
+% \subtitle{Public Lecture at the Chandrasekhar Auditorium, ICTS-TIFR, Bengaluru}
+\speaker{{\kan ನಾ. ಸೋಮೇಶ್ವರ}} % Define speaker
+\affiliation{{\kan ಬೆಂಗಳೂರು}} % Define affiliation
+\date{Friday, August 28, 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+{\kan ಕಾರ್ಯಕ್ರಮದ ಬಗ್ಗೆ ನಿಮ್ಮ ಅನಿಸಿಕೆಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ. ಇದು ಮುಂದಿನ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಮತ್ತಷ್ಟು ಉತ್ತಮವಾಗಿ ರೂಪಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ.}
+
+Please share your feedback. This will help us improve our future programs.
+
+{\kan ಇಂದಿನ ಕಾರ್ಯಕ್ರಮದ ಬಗ್ಗೆ ನಿಮ್ಮ ರೇಟಿಂಗ್?} Rating the event
+
+\end{document}
